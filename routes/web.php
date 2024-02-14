@@ -19,6 +19,7 @@ Route::get('/sobre-nos', [\App\Http\Controllers\SobreNosController::class, 'sobr
 
 Route::get('/contato', [\App\Http\Controllers\ContatoController::class, 'contato']);
 
-Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem}', function(string $nome, string $categoria, string $assunto, string $mensagem){
-    echo "Estamos aqui $nome - $categoria - $assunto - $mensagem";
+Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem?}',
+    function(string $nome, string $categoria, string $assunto, string $mensagem = null){
+        echo "Estamos aqui $nome - $categoria - $assunto - $mensagem ";
 });
