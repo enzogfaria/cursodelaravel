@@ -9,4 +9,8 @@ class PrincipalController extends Controller
     public function principal() {
         return view('site.principal');
     }
+
+    public function rotareturn(){
+        return redirect()->route('site.rota1');
+    }
 }

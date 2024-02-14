@@ -24,3 +24,10 @@ Route::prefix('/app')->group(function(){
     Route::get('/produtos', function(){return 'Produtos';})->name('app.produtos');
 });
 
+
+Route::get('/rota2', [\App\Http\Controllers\PrincipalController::class, 'rotareturn'])->name('site.rota1');
+
+Route::get('/rota1', function(){
+    echo 'Rota1';
+})->name('site.rota1');
+
