@@ -23,9 +23,7 @@ class ContatoController extends Controller
     }
 
     public function salvar(Request $request){
-        $request->validate([
-            'nome' => 'required'
-        ]);
+        SiteContato::create($request->all());
     }
 }
 
